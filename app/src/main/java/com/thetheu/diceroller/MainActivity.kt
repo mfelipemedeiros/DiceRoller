@@ -19,11 +19,20 @@ class MainActivity : AppCompatActivity() {
         //Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show()
         /*val resultText: TextView = findViewById(R.id.result_text)
         resultText.text = "Dice Button"*/
-        val resultText: TextView = findViewById(R.id.result_text)
+       /*  val resultText: TextView = findViewById(R.id.result_text)
         val randomInt  = (1..6).random()
 
         resultText.text = randomInt.toString()
-
+    */
+    val randomInt  = (1..6).random()
+    val drawableResource = when (randomInt){
+        1 -> R.drawable.dice_1
+        2 -> R.drawable.dice_2
+        3 -> R.drawable.dice_3
+        4 -> R.drawable.dice_4
+        5 -> R.drawable.dice_5
+        else -> R.drawable.dice_6
+    }
 
 
     }
